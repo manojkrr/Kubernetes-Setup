@@ -6,6 +6,10 @@ like [Ingress](https://kubernetes.github.io/ingress-nginx/), [Prometheus Monitor
 and [PostgreSQL](https://www.postgresql.org/). This setup is intended to run on local environments for testing and
 development purposes.
 
+![Deployment Diagram](./assets/deployment.png)
+
+![Sequence Diagram](./assets/deployment.png)
+
 ## Table of Contents
 - [Prerequisites](#prerequisites)
 - [Install the dependencies](#install-the-dependencies-using-install-softwaresh)

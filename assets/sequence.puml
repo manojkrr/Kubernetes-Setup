@@ -1,0 +1,17 @@
+@startuml
+actor User
+entity "Kind Kubernetes Cluster" as Kind
+entity "Ingress Controller" as Ingress
+entity "Prometheus Monitoring" as Prometheus
+entity "PostgreSQL Database" as Postgres
+
+User --> Kind : Creates Cluster
+Kind --> Ingress : Installs Ingress Controller
+Kind --> Prometheus : Installs Prometheus Monitoring
+Kind --> Postgres : Installs PostgreSQL
+
+Postgres --> User : Provides Database Access
+Prometheus --> User : Provides Monitoring Dashboard
+Ingress --> User : Manages External Access
+
+@enduml

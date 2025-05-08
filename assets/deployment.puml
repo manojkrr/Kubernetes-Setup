@@ -1,0 +1,28 @@
+@startuml
+
+actor User
+
+node "Local Machine (MacOS/Linux)" {
+  component "Kind Cluster" as Kind
+  component "kubectl" as Kubectl
+  component "Helm" as Helm
+}
+
+node "Kubernetes Cluster" {
+  component "Ingress Controller" as Ingress
+  component "Prometheus Monitoring" as Prometheus
+  component "PostgreSQL Database" as Postgres
+}
+
+User --> Kubectl : Uses kubectl to interact with cluster
+Kubectl --> Kind : Communicates with Kind Cluster
+Helm --> Kind : Deploys charts using Helm
+Kind --> Ingress : Deploys Ingress Controller
+Kind --> Prometheus : Deploys Prometheus Monitoring
+Kind --> Postgres : Deploys PostgreSQL
+
+Postgres --> User : Provides Database Access
+Prometheus --> User : Provides Monitoring Data
+Ingress --> User : Manages External Access
+
+@enduml
