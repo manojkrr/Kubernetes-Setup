@@ -8,7 +8,7 @@ development purposes.
 
 ![Deployment Diagram](./assets/deployment.png)
 
-![Sequence Diagram](./assets/deployment.png)
+![Sequence Diagram](./assets/sequence.png)
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
